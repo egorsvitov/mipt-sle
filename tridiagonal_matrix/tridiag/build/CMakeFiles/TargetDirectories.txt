@@ -1,0 +1,3 @@
+/home/egor/linear_equations/tridiagonal_matrix/tridiag/build/CMakeFiles/tridiag.dir
+/home/egor/linear_equations/tridiagonal_matrix/tridiag/build/CMakeFiles/edit_cache.dir
+/home/egor/linear_equations/tridiagonal_matrix/tridiag/build/CMakeFiles/rebuild_cache.dir

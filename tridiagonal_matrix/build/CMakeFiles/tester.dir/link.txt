@@ -1,0 +1,1 @@
+/usr/local/gcc-12.2.0/bin/g++-12.2 CMakeFiles/tester.dir/tester.cpp.o -o tester  lib/libgtest_main.a ../tridiag/build/libtridiag.a lib/libgtest.a 
