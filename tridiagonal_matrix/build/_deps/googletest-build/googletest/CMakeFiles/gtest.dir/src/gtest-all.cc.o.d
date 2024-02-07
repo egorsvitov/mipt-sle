@@ -1,7 +1,7 @@
 _deps/googletest-build/googletest/CMakeFiles/gtest.dir/src/gtest-all.cc.o: \
- /home/egor/linear_equations/tridiagonal_matrix/build/_deps/googletest-src/googletest/src/gtest-all.cc \
+ /home/egor/mipt-sle/tridiagonal_matrix/build/_deps/googletest-src/googletest/src/gtest-all.cc \
  /usr/include/stdc-predef.h \
- /home/egor/linear_equations/tridiagonal_matrix/build/_deps/googletest-src/googletest/include/gtest/gtest.h \
+ /home/egor/mipt-sle/tridiagonal_matrix/build/_deps/googletest-src/googletest/include/gtest/gtest.h \
  /usr/local/gcc-12.2.0/include/c++/12.2.0/cstddef \
  /usr/local/gcc-12.2.0/include/c++/12.2.0/x86_64-linux-gnu/bits/c++config.h \
  /usr/local/gcc-12.2.0/include/c++/12.2.0/x86_64-linux-gnu/bits/os_defines.h \
@@ -192,13 +192,13 @@ _deps/googletest-build/googletest/CMakeFiles/gtest.dir/src/gtest-all.cc.o: \
  /usr/local/gcc-12.2.0/include/c++/12.2.0/bits/stl_vector.h \
  /usr/local/gcc-12.2.0/include/c++/12.2.0/bits/stl_bvector.h \
  /usr/local/gcc-12.2.0/include/c++/12.2.0/bits/vector.tcc \
- /home/egor/linear_equations/tridiagonal_matrix/build/_deps/googletest-src/googletest/include/gtest/gtest-assertion-result.h \
- /home/egor/linear_equations/tridiagonal_matrix/build/_deps/googletest-src/googletest/include/gtest/gtest-message.h \
+ /home/egor/mipt-sle/tridiagonal_matrix/build/_deps/googletest-src/googletest/include/gtest/gtest-assertion-result.h \
+ /home/egor/mipt-sle/tridiagonal_matrix/build/_deps/googletest-src/googletest/include/gtest/gtest-message.h \
  /usr/local/gcc-12.2.0/include/c++/12.2.0/sstream \
  /usr/local/gcc-12.2.0/include/c++/12.2.0/istream \
  /usr/local/gcc-12.2.0/include/c++/12.2.0/bits/istream.tcc \
  /usr/local/gcc-12.2.0/include/c++/12.2.0/bits/sstream.tcc \
- /home/egor/linear_equations/tridiagonal_matrix/build/_deps/googletest-src/googletest/include/gtest/internal/gtest-port.h \
+ /home/egor/mipt-sle/tridiagonal_matrix/build/_deps/googletest-src/googletest/include/gtest/internal/gtest-port.h \
  /usr/local/gcc-12.2.0/include/c++/12.2.0/stdlib.h /usr/include/string.h \
  /usr/include/strings.h /usr/local/gcc-12.2.0/include/c++/12.2.0/iostream \
  /usr/local/gcc-12.2.0/include/c++/12.2.0/locale \
@@ -225,8 +225,8 @@ _deps/googletest-build/googletest/CMakeFiles/gtest.dir/src/gtest-all.cc.o: \
  /usr/include/x86_64-linux-gnu/bits/statx-generic.h \
  /usr/include/x86_64-linux-gnu/bits/types/struct_statx_timestamp.h \
  /usr/include/x86_64-linux-gnu/bits/types/struct_statx.h \
- /home/egor/linear_equations/tridiagonal_matrix/build/_deps/googletest-src/googletest/include/gtest/internal/custom/gtest-port.h \
- /home/egor/linear_equations/tridiagonal_matrix/build/_deps/googletest-src/googletest/include/gtest/internal/gtest-port-arch.h \
+ /home/egor/mipt-sle/tridiagonal_matrix/build/_deps/googletest-src/googletest/include/gtest/internal/custom/gtest-port.h \
+ /home/egor/mipt-sle/tridiagonal_matrix/build/_deps/googletest-src/googletest/include/gtest/internal/gtest-port-arch.h \
  /usr/include/unistd.h /usr/include/x86_64-linux-gnu/bits/posix_opt.h \
  /usr/include/x86_64-linux-gnu/bits/environments.h \
  /usr/include/x86_64-linux-gnu/bits/confname.h \
@@ -245,11 +245,11 @@ _deps/googletest-build/googletest/CMakeFiles/gtest.dir/src/gtest-all.cc.o: \
  /usr/local/gcc-12.2.0/include/c++/12.2.0/optional \
  /usr/local/gcc-12.2.0/include/c++/12.2.0/bits/enable_special_members.h \
  /usr/local/gcc-12.2.0/include/c++/12.2.0/variant \
- /home/egor/linear_equations/tridiagonal_matrix/build/_deps/googletest-src/googletest/include/gtest/gtest-death-test.h \
- /home/egor/linear_equations/tridiagonal_matrix/build/_deps/googletest-src/googletest/include/gtest/internal/gtest-death-test-internal.h \
- /home/egor/linear_equations/tridiagonal_matrix/build/_deps/googletest-src/googletest/include/gtest/gtest-matchers.h \
+ /home/egor/mipt-sle/tridiagonal_matrix/build/_deps/googletest-src/googletest/include/gtest/gtest-death-test.h \
+ /home/egor/mipt-sle/tridiagonal_matrix/build/_deps/googletest-src/googletest/include/gtest/internal/gtest-death-test-internal.h \
+ /home/egor/mipt-sle/tridiagonal_matrix/build/_deps/googletest-src/googletest/include/gtest/gtest-matchers.h \
  /usr/local/gcc-12.2.0/include/c++/12.2.0/atomic \
- /home/egor/linear_equations/tridiagonal_matrix/build/_deps/googletest-src/googletest/include/gtest/gtest-printers.h \
+ /home/egor/mipt-sle/tridiagonal_matrix/build/_deps/googletest-src/googletest/include/gtest/gtest-printers.h \
  /usr/local/gcc-12.2.0/include/c++/12.2.0/functional \
  /usr/local/gcc-12.2.0/include/c++/12.2.0/bits/std_function.h \
  /usr/local/gcc-12.2.0/include/c++/12.2.0/unordered_map \
@@ -266,7 +266,7 @@ _deps/googletest-build/googletest/CMakeFiles/gtest.dir/src/gtest-all.cc.o: \
  /usr/local/gcc-12.2.0/include/c++/12.2.0/bits/uniform_int_dist.h \
  /usr/local/gcc-12.2.0/include/c++/12.2.0/utility \
  /usr/local/gcc-12.2.0/include/c++/12.2.0/bits/stl_relops.h \
- /home/egor/linear_equations/tridiagonal_matrix/build/_deps/googletest-src/googletest/include/gtest/internal/gtest-internal.h \
+ /home/egor/mipt-sle/tridiagonal_matrix/build/_deps/googletest-src/googletest/include/gtest/internal/gtest-internal.h \
  /usr/include/x86_64-linux-gnu/sys/wait.h /usr/include/signal.h \
  /usr/include/x86_64-linux-gnu/bits/signum-generic.h \
  /usr/include/x86_64-linux-gnu/bits/signum-arch.h \
@@ -299,24 +299,24 @@ _deps/googletest-build/googletest/CMakeFiles/gtest.dir/src/gtest-all.cc.o: \
  /usr/local/gcc-12.2.0/include/c++/12.2.0/set \
  /usr/local/gcc-12.2.0/include/c++/12.2.0/bits/stl_set.h \
  /usr/local/gcc-12.2.0/include/c++/12.2.0/bits/stl_multiset.h \
- /home/egor/linear_equations/tridiagonal_matrix/build/_deps/googletest-src/googletest/include/gtest/internal/gtest-filepath.h \
- /home/egor/linear_equations/tridiagonal_matrix/build/_deps/googletest-src/googletest/include/gtest/internal/gtest-string.h \
- /home/egor/linear_equations/tridiagonal_matrix/build/_deps/googletest-src/googletest/include/gtest/internal/gtest-type-util.h \
+ /home/egor/mipt-sle/tridiagonal_matrix/build/_deps/googletest-src/googletest/include/gtest/internal/gtest-filepath.h \
+ /home/egor/mipt-sle/tridiagonal_matrix/build/_deps/googletest-src/googletest/include/gtest/internal/gtest-string.h \
+ /home/egor/mipt-sle/tridiagonal_matrix/build/_deps/googletest-src/googletest/include/gtest/internal/gtest-type-util.h \
  /usr/local/gcc-12.2.0/include/c++/12.2.0/cxxabi.h \
  /usr/local/gcc-12.2.0/include/c++/12.2.0/x86_64-linux-gnu/bits/cxxabi_tweaks.h \
- /home/egor/linear_equations/tridiagonal_matrix/build/_deps/googletest-src/googletest/include/gtest/internal/custom/gtest-printers.h \
- /home/egor/linear_equations/tridiagonal_matrix/build/_deps/googletest-src/googletest/include/gtest/gtest-param-test.h \
+ /home/egor/mipt-sle/tridiagonal_matrix/build/_deps/googletest-src/googletest/include/gtest/internal/custom/gtest-printers.h \
+ /home/egor/mipt-sle/tridiagonal_matrix/build/_deps/googletest-src/googletest/include/gtest/gtest-param-test.h \
  /usr/local/gcc-12.2.0/include/c++/12.2.0/iterator \
  /usr/local/gcc-12.2.0/include/c++/12.2.0/bits/stream_iterator.h \
- /home/egor/linear_equations/tridiagonal_matrix/build/_deps/googletest-src/googletest/include/gtest/internal/gtest-param-util.h \
+ /home/egor/mipt-sle/tridiagonal_matrix/build/_deps/googletest-src/googletest/include/gtest/internal/gtest-param-util.h \
  /usr/local/gcc-12.2.0/include/c++/12.2.0/cassert /usr/include/assert.h \
- /home/egor/linear_equations/tridiagonal_matrix/build/_deps/googletest-src/googletest/include/gtest/gtest-test-part.h \
- /home/egor/linear_equations/tridiagonal_matrix/build/_deps/googletest-src/googletest/include/gtest/gtest-typed-test.h \
- /home/egor/linear_equations/tridiagonal_matrix/build/_deps/googletest-src/googletest/include/gtest/gtest_pred_impl.h \
- /home/egor/linear_equations/tridiagonal_matrix/build/_deps/googletest-src/googletest/include/gtest/gtest_prod.h \
- /home/egor/linear_equations/tridiagonal_matrix/build/_deps/googletest-src/googletest/src/gtest-assertion-result.cc \
- /home/egor/linear_equations/tridiagonal_matrix/build/_deps/googletest-src/googletest/src/gtest-death-test.cc \
- /home/egor/linear_equations/tridiagonal_matrix/build/_deps/googletest-src/googletest/include/gtest/internal/custom/gtest.h \
+ /home/egor/mipt-sle/tridiagonal_matrix/build/_deps/googletest-src/googletest/include/gtest/gtest-test-part.h \
+ /home/egor/mipt-sle/tridiagonal_matrix/build/_deps/googletest-src/googletest/include/gtest/gtest-typed-test.h \
+ /home/egor/mipt-sle/tridiagonal_matrix/build/_deps/googletest-src/googletest/include/gtest/gtest_pred_impl.h \
+ /home/egor/mipt-sle/tridiagonal_matrix/build/_deps/googletest-src/googletest/include/gtest/gtest_prod.h \
+ /home/egor/mipt-sle/tridiagonal_matrix/build/_deps/googletest-src/googletest/src/gtest-assertion-result.cc \
+ /home/egor/mipt-sle/tridiagonal_matrix/build/_deps/googletest-src/googletest/src/gtest-death-test.cc \
+ /home/egor/mipt-sle/tridiagonal_matrix/build/_deps/googletest-src/googletest/include/gtest/internal/custom/gtest.h \
  /usr/include/fcntl.h /usr/include/x86_64-linux-gnu/bits/fcntl.h \
  /usr/include/x86_64-linux-gnu/bits/fcntl-linux.h \
  /usr/include/x86_64-linux-gnu/bits/types/struct_iovec.h \
@@ -334,7 +334,7 @@ _deps/googletest-build/googletest/CMakeFiles/gtest.dir/src/gtest-all.cc.o: \
  /usr/include/x86_64-linux-gnu/bits/mman-map-flags-generic.h \
  /usr/include/x86_64-linux-gnu/bits/mman-linux.h \
  /usr/include/x86_64-linux-gnu/bits/mman-shared.h \
- /home/egor/linear_equations/tridiagonal_matrix/build/_deps/googletest-src/googletest/src/gtest-internal-inl.h \
+ /home/egor/mipt-sle/tridiagonal_matrix/build/_deps/googletest-src/googletest/src/gtest-internal-inl.h \
  /usr/local/gcc-12.2.0/include/c++/12.2.0/algorithm \
  /usr/local/gcc-12.2.0/include/c++/12.2.0/pstl/glue_algorithm_defs.h \
  /usr/include/arpa/inet.h /usr/include/netinet/in.h \
@@ -349,19 +349,19 @@ _deps/googletest-build/googletest/CMakeFiles/gtest.dir/src/gtest-all.cc.o: \
  /usr/include/x86_64-linux-gnu/bits/types/struct_osockaddr.h \
  /usr/include/x86_64-linux-gnu/bits/in.h /usr/include/netdb.h \
  /usr/include/rpc/netdb.h /usr/include/x86_64-linux-gnu/bits/netdb.h \
- /home/egor/linear_equations/tridiagonal_matrix/build/_deps/googletest-src/googletest/include/gtest/gtest-spi.h \
- /home/egor/linear_equations/tridiagonal_matrix/build/_deps/googletest-src/googletest/src/gtest-filepath.cc \
+ /home/egor/mipt-sle/tridiagonal_matrix/build/_deps/googletest-src/googletest/include/gtest/gtest-spi.h \
+ /home/egor/mipt-sle/tridiagonal_matrix/build/_deps/googletest-src/googletest/src/gtest-filepath.cc \
  /usr/local/gcc-12.2.0/include/c++/12.2.0/climits \
- /home/egor/linear_equations/tridiagonal_matrix/build/_deps/googletest-src/googletest/src/gtest-matchers.cc \
- /home/egor/linear_equations/tridiagonal_matrix/build/_deps/googletest-src/googletest/src/gtest-port.cc \
+ /home/egor/mipt-sle/tridiagonal_matrix/build/_deps/googletest-src/googletest/src/gtest-matchers.cc \
+ /home/egor/mipt-sle/tridiagonal_matrix/build/_deps/googletest-src/googletest/src/gtest-port.cc \
  /usr/local/gcc-12.2.0/include/c++/12.2.0/fstream \
  /usr/local/gcc-12.2.0/include/c++/12.2.0/x86_64-linux-gnu/bits/basic_file.h \
  /usr/local/gcc-12.2.0/include/c++/12.2.0/x86_64-linux-gnu/bits/c++io.h \
  /usr/local/gcc-12.2.0/include/c++/12.2.0/bits/fstream.tcc \
- /home/egor/linear_equations/tridiagonal_matrix/build/_deps/googletest-src/googletest/src/gtest-printers.cc \
- /home/egor/linear_equations/tridiagonal_matrix/build/_deps/googletest-src/googletest/src/gtest-test-part.cc \
- /home/egor/linear_equations/tridiagonal_matrix/build/_deps/googletest-src/googletest/src/gtest-typed-test.cc \
- /home/egor/linear_equations/tridiagonal_matrix/build/_deps/googletest-src/googletest/src/gtest.cc \
+ /home/egor/mipt-sle/tridiagonal_matrix/build/_deps/googletest-src/googletest/src/gtest-printers.cc \
+ /home/egor/mipt-sle/tridiagonal_matrix/build/_deps/googletest-src/googletest/src/gtest-test-part.cc \
+ /home/egor/mipt-sle/tridiagonal_matrix/build/_deps/googletest-src/googletest/src/gtest-typed-test.cc \
+ /home/egor/mipt-sle/tridiagonal_matrix/build/_deps/googletest-src/googletest/src/gtest.cc \
  /usr/local/gcc-12.2.0/include/c++/12.2.0/chrono \
  /usr/local/gcc-12.2.0/include/c++/12.2.0/cmath /usr/include/math.h \
  /usr/include/x86_64-linux-gnu/bits/math-vector.h \

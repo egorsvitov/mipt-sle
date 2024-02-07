@@ -1,6 +1,6 @@
 # CMake generated Testfile for 
-# Source directory: /home/egor/linear_equations/tridiagonal_matrix/build/_deps/googletest-src/googletest
-# Build directory: /home/egor/linear_equations/tridiagonal_matrix/build/_deps/googletest-build/googletest
+# Source directory: /home/egor/mipt-sle/tridiagonal_matrix/build/_deps/googletest-src/googletest
+# Build directory: /home/egor/mipt-sle/tridiagonal_matrix/build/_deps/googletest-build/googletest
 # 
 # This file includes the relevant testing commands required for 
 # testing this directory and lists subdirectories to be tested as well.

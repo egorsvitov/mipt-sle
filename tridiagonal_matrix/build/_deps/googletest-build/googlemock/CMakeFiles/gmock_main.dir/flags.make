@@ -4,7 +4,7 @@
 # compile CXX with /usr/local/gcc-12.2.0/bin/g++-12.2
 CXX_DEFINES = 
 
-CXX_INCLUDES = -isystem /home/egor/linear_equations/tridiagonal_matrix/build/_deps/googletest-src/googlemock/include -isystem /home/egor/linear_equations/tridiagonal_matrix/build/_deps/googletest-src/googlemock -isystem /home/egor/linear_equations/tridiagonal_matrix/build/_deps/googletest-src/googletest/include -isystem /home/egor/linear_equations/tridiagonal_matrix/build/_deps/googletest-src/googletest
+CXX_INCLUDES = -isystem /home/egor/mipt-sle/tridiagonal_matrix/build/_deps/googletest-src/googlemock/include -isystem /home/egor/mipt-sle/tridiagonal_matrix/build/_deps/googletest-src/googlemock -isystem /home/egor/mipt-sle/tridiagonal_matrix/build/_deps/googletest-src/googletest/include -isystem /home/egor/mipt-sle/tridiagonal_matrix/build/_deps/googletest-src/googletest
 
 CXX_FLAGS = -Wall -Wshadow -Wno-error=dangling-else -DGTEST_HAS_PTHREAD=1 -fexceptions -Wextra -Wno-unused-parameter -Wno-missing-field-initializers
 

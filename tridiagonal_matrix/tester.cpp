@@ -1,6 +1,7 @@
 #include "tridiag/include/tridiag.h"
 #include <iostream>
-#include <gtest/gtest.h>
+#include "googletest/googletest/include/gtest/gtest.h"
+//#include <gtest/gtest.h>
 
 TEST(test1, satisfies_conditions) {
     std::vector<double> f = {1, 2, 3};

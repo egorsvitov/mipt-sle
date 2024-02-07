@@ -14,8 +14,8 @@ project(googletest-populate NONE)
 include(ExternalProject)
 ExternalProject_Add(googletest-populate
                      "UPDATE_DISCONNECTED" "False" "URL" "https://github.com/google/googletest/archive/5376968f6948923e2411081fd9372e71a59d8e77.zip"
-                    SOURCE_DIR          "/home/egor/linear_equations/tridiagonal_matrix/build/_deps/googletest-src"
-                    BINARY_DIR          "/home/egor/linear_equations/tridiagonal_matrix/build/_deps/googletest-build"
+                    SOURCE_DIR          "/home/egor/mipt-sle/tridiagonal_matrix/build/_deps/googletest-src"
+                    BINARY_DIR          "/home/egor/mipt-sle/tridiagonal_matrix/build/_deps/googletest-build"
                     CONFIGURE_COMMAND   ""
                     BUILD_COMMAND       ""
                     INSTALL_COMMAND     ""

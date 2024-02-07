@@ -1,7 +1,7 @@
 # Make file names absolute:
 #
-get_filename_component(filename "/home/egor/linear_equations/tridiagonal_matrix/build/_deps/googletest-subbuild/googletest-populate-prefix/src/5376968f6948923e2411081fd9372e71a59d8e77.zip" ABSOLUTE)
-get_filename_component(directory "/home/egor/linear_equations/tridiagonal_matrix/build/_deps/googletest-src" ABSOLUTE)
+get_filename_component(filename "/home/egor/mipt-sle/tridiagonal_matrix/build/_deps/googletest-subbuild/googletest-populate-prefix/src/5376968f6948923e2411081fd9372e71a59d8e77.zip" ABSOLUTE)
+get_filename_component(directory "/home/egor/mipt-sle/tridiagonal_matrix/build/_deps/googletest-src" ABSOLUTE)
 
 message(STATUS "extracting...
      src='${filename}'
