@@ -12,12 +12,7 @@ int main() {
     }
     std::cout << '\n';
     mtrx::csr<float> B(A);
-    for (int i =0; i < 3; i++) {
-        for (int j = 0; j< 3; j++) {
-            std::cout << B(i, j) << ' ';
-        }
-        std::cout << std::endl;
-    }
+    B.print();
     for (float i : B.get_raw_values()) {
         std::cout << i << ' ';
     }
@@ -30,4 +25,6 @@ int main() {
         std::cout << i << ' ';
     }
     std::cout << std::endl;
+    mtrx::csr<float> C = 6.0f*B;
+    C.print();
 }

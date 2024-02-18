@@ -20,7 +20,7 @@ namespace mtrx {
                 }
                 return res;
             }
-            mtrx::dense<T> operator*(const T& rsh) {
+            mtrx::dense<T> operator*(const T& rhs) const {
                 std::vector<T> new_data(data.size());
                 for (int i = 0; i < data.size(); i++) {
                     new_data[i] = data[i]*rhs;
@@ -33,6 +33,15 @@ namespace mtrx {
             }
             T height() const {
                 return this->m;
+            }
+            void print() {
+                for (int i = 0; i < m; i++) {
+                    std::cout << "| ";
+                    for (int j = 0; j < n; j++) {
+                        std::cout << (*this)(i, j) << " ";
+                    }
+                    std::cout << "|\n";
+                }
             }
         private:
             std::vector<T> data;
@@ -49,7 +58,7 @@ namespace mtrx {
     class csr {
         public:
             csr() : values(), col_indxs(), row_indxs(), m(0), n(0) {}
-            csr(std::size_t m, std::size_t n, const std::vector<T>& values, const std::vector<T>& col_indxs, const  std::vector<T>& row_indxs) : m(m), n(n), values(values), col_indxs(col_indxs), row_indxs(row_indxs) {}
+            csr(std::size_t m, std::size_t n, const std::vector<T>& values, const std::vector<std::size_t>& col_indxs, const std::vector<std::size_t>& row_indxs) : m(m), n(n), values(values), col_indxs(col_indxs), row_indxs(row_indxs) {}
             csr(const mtrx::dense<T>& source) : m(source.height()), n(source.width()), values(), col_indxs(), row_indxs() {
                 int count = 0;
                 row_indxs.push_back(0);
@@ -65,11 +74,11 @@ namespace mtrx {
                 }
             }
             T operator()(std::size_t i, std::size_t j) const {
-                unsigned int row_start = row_indxs[i];
-                unsigned int row_end = row_indxs[i+1];
-                unsigned int true_k = 0;
+                std::size_t row_start = row_indxs[i];
+                std::size_t row_end = row_indxs[i+1];
+                std::size_t true_k = 0;
                 bool s = false;
-                for (unsigned int k = row_start; k < row_end; k++) {
+                for (std::size_t k = row_start; k < row_end; k++) {
                     if (col_indxs[k] == j) {
                         true_k = k;
                         s = true;
@@ -87,7 +96,7 @@ namespace mtrx {
                 }
                 return res;
             }
-            mtrx::csr<T> operator*(const T& rhs) {
+            mtrx::csr<T> operator*(const T& rhs) const {
                 std::vector<T> new_values(values.size());
                 for (int i = 0; i < values.size(); i++) {
                     new_values[i] = values[i]*rhs;
@@ -105,16 +114,25 @@ namespace mtrx {
             std::vector<T> get_raw_values() const {
                 return values;
             }
-            std::vector<unsigned int> get_raw_cols() const {
+            std::vector<std::size_t> get_raw_cols() const {
                 return col_indxs;
             }
-            std::vector<unsigned int> get_raw_rows() const {
+            std::vector<std::size_t> get_raw_rows() const {
                 return row_indxs;
+            }
+            void print() {
+                for (int i = 0; i < m; i++) {
+                    std::cout << "| ";
+                    for (int j = 0; j < n; j++) {
+                        std::cout << (*this)(i, j) << " ";
+                    }
+                    std::cout << "|\n";
+                }
             }
         private:
             std::vector<T> values;
-            std::vector<unsigned int> col_indxs;
-            std::vector<unsigned int> row_indxs;
+            std::vector<std::size_t> col_indxs;
+            std::vector<std::size_t> row_indxs;
             std::size_t m;
             std::size_t n;
     };
