@@ -96,3 +96,21 @@ namespace mtrx {
             std::size_t n;
     };
 }
+
+template<typename T>
+std::vector<T> operator+(const std::vector<T>& lhs, const std::vector<T>& rhs) {
+    std::vector<T> res(rhs.size());
+    for (int i = 0; i < rhs.size(); i++) {
+        res[i] = lhs[i] + rhs[i];       
+    }
+    return res;
+}
+
+template<typename T>
+std::vector<T> operator*(const std::vector<T>& lhs, const std::vector<T>& rhs) {
+    std::vector<T> res(rhs.size());
+    for (int i = 0; i < rhs.size(); i++) {
+        res[i] = lhs[i] * rhs[i];       
+    }
+    return res;
+}
