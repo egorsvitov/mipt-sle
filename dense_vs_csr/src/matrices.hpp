@@ -105,11 +105,11 @@ namespace mtrx {
                 return res;
             }
 
-            T width() const {
-                return this->n;
+            std::size_t width() const {
+                return n;
             }
-            T height() const {
-                return this->m;
+            std::size_t height() const {
+                return m;
             }
             std::vector<T> get_raw_values() const {
                 return values;
