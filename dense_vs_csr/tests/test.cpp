@@ -3,7 +3,7 @@
 
 int main() {
     mtrx::dense<float> A(3, 3, {1, 2, 3, 
-                                2, 1, 3, 
+                                2, 0, 3, 
                                 3, 1, 2});
     std::vector<float> b = {1, 2, 3};
     std::vector<float> x = A*b;

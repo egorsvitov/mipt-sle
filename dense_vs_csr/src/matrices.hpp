@@ -52,17 +52,19 @@ namespace mtrx {
                     row_indxs.push_back(count);
                 }
             }
-            const T& operator()(std::size_t i, std::size_t j) const {
+            T operator()(std::size_t i, std::size_t j) const {
                 unsigned int row_start = row_indxs[i];
                 unsigned int row_end = row_indxs[i+1];
                 unsigned int true_k = 0;
+                bool s = false;
                 for (unsigned int k = row_start; k < row_end; k++) {
                     if (col_indxs[k] == j) {
                         true_k = k;
+                        s = true;
                         break;
                     }
                 }
-                return values[true_k];
+                return ((s) ? values[true_k] : 0);
             }
             std::vector<T> operator*(const std::vector<T>& x) const {
                 std::vector<T> res(m, 0);

@@ -33,7 +33,7 @@ def animate(i):
     dense.set_ydata(t_dense[10*i:10*i+10])
     csr.set_ydata(t_csr[10*i:10*i+10])
     text.set_text(f'density={round(p[10*i]*100, 3)}%')
-    #ax.set_ylim(0, t_csr[10*i+9]*1.1)
+    ax.set_ylim(0, t_csr[10*i+9]*1.1)
     #ax.autoscale()
     #fig.savefig(f'pics/graph_{i}.png')
     print(i)
@@ -44,6 +44,6 @@ ani = animation.FuncAnimation(fig, animate, repeat=True,
 writer = animation.PillowWriter(fps=5,
                                 metadata=dict(artist='Me'),
                                 bitrate=1800)
-ani.save('scatter.gif', writer=writer)
+ani.save('dynamic_scale.gif', writer=writer)
 
 #for i in range(0, len(n), 10):   
