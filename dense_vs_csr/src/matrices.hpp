@@ -28,11 +28,11 @@ namespace mtrx {
                 mtrx::dense<T> res(m, n, new_data);
                 return res;
             }
-            T width() const {
-                return this->n;
+            std::size_t width() const {
+                return n;
             }
-            T height() const {
-                return this->m;
+            std::size_t height() const {
+                return m;
             }
             void print() {
                 for (int i = 0; i < m; i++) {
