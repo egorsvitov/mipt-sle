@@ -98,7 +98,7 @@ namespace mtrx {
 }
 
 template<typename T>
-std::vector<T> operator+(const std::vector<T>& lhs, const std::vector<T>& rhs) {
+std::vector<T> vec_add(const std::vector<T>& lhs, const std::vector<T>& rhs) {
     std::vector<T> res(rhs.size());
     for (int i = 0; i < rhs.size(); i++) {
         res[i] = lhs[i] + rhs[i];       
@@ -107,7 +107,7 @@ std::vector<T> operator+(const std::vector<T>& lhs, const std::vector<T>& rhs) {
 }
 
 template<typename T>
-std::vector<T> operator*(const std::vector<T>& lhs, const std::vector<T>& rhs) {
+std::vector<T> vec_scal_prod(const std::vector<T>& lhs, const std::vector<T>& rhs) {
     std::vector<T> res(rhs.size());
     for (int i = 0; i < rhs.size(); i++) {
         res[i] = lhs[i] * rhs[i];       
