@@ -141,32 +141,4 @@ template<typename T>
 mtrx::csr<T> operator*(const T& lhs, const mtrx::csr<T>& rhs) {
     return rhs*lhs;
 }
-
-template<typename T>
-std::vector<T> vec_add(const std::vector<T>& lhs, const std::vector<T>& rhs) {
-    std::vector<T> res(rhs.size());
-    for (int i = 0; i < rhs.size(); i++) {
-        res[i] = lhs[i] + rhs[i];       
-    }
-    return res;
-}
-
-template<typename T>
-std::vector<T> vec_dot(const std::vector<T>& lhs, const std::vector<T>& rhs) {
-    std::vector<T> res(rhs.size());
-    for (int i = 0; i < rhs.size(); i++) {
-        res[i] = lhs[i] * rhs[i];       
-    }
-    return res;
-}
-
-template<typename T>
-std::vector<T> vec_sub(const std::vector<T>& lhs, const std::vector<T>& rhs) {
-    std::vector<T> res(rhs.size());
-    for (int i = 0; i < rhs.size(); i++) {
-        res[i] = lhs[i] - rhs[i];       
-    }
-    return res;
-}
-
 }

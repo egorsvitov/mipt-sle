@@ -1,5 +1,6 @@
 #include <iostream>
 #include "../src/matrices.hpp"
+#include "../src/vector_operations.hpp"
 
 int main() {
     mtrx::dense<float> A(3, 3, {1, 2, 3, 
@@ -27,4 +28,11 @@ int main() {
     std::cout << std::endl;
     mtrx::csr<float> C = 6.0f*B;
     C.print();
+
+    std::vector<float> q = {1, 2, 3};
+    std::vector<float> r = {4, 5, 6};
+    std::cout << q << "| " << r << std::endl;
+    std::cout << q*r << ' ' << r*q << std::endl;
+    std::cout << q + r << std::endl;
+    std::cout << q*3.0f << ' ' << 3.0f*q << std::endl;
 }
