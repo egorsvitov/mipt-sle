@@ -1,4 +1,5 @@
 #include <vector>
+#include <iostream>
 
 namespace mtrx {
 
@@ -19,6 +20,14 @@ namespace mtrx {
                 }
                 return res;
             }
+            mtrx::dense<T> operator*(const T& rsh) {
+                std::vector<T> new_data(data.size());
+                for (int i = 0; i < data.size(); i++) {
+                    new_data[i] = data[i]*rhs;
+                }
+                mtrx::dense<T> res(m, n, new_data);
+                return res;
+            }
             T width() const {
                 return this->n;
             }
@@ -31,7 +40,10 @@ namespace mtrx {
             std::size_t n;
     };
 
-
+    template<typename T>
+    mtrx::dense<T> operator*(const T& lhs, const mtrx::dense<T>& rhs) {
+        return rhs*lhs;
+    }
 
     template<typename T>
     class csr {
@@ -75,6 +87,15 @@ namespace mtrx {
                 }
                 return res;
             }
+            mtrx::csr<T> operator*(const T& rhs) {
+                std::vector<T> new_values(values.size());
+                for (int i = 0; i < values.size(); i++) {
+                    new_values[i] = values[i]*rhs;
+                }
+                mtrx::csr<T> res(m, n, new_values, col_indxs, row_indxs);
+                return res;
+            }
+
             T width() const {
                 return this->n;
             }
@@ -97,6 +118,10 @@ namespace mtrx {
             std::size_t m;
             std::size_t n;
     };
+
+template<typename T>
+mtrx::csr<T> operator*(const T& lhs, const mtrx::csr<T>& rhs) {
+    return rhs*lhs;
 }
 
 template<typename T>
@@ -109,10 +134,21 @@ std::vector<T> vec_add(const std::vector<T>& lhs, const std::vector<T>& rhs) {
 }
 
 template<typename T>
-std::vector<T> vec_scal_prod(const std::vector<T>& lhs, const std::vector<T>& rhs) {
+std::vector<T> vec_dot(const std::vector<T>& lhs, const std::vector<T>& rhs) {
     std::vector<T> res(rhs.size());
     for (int i = 0; i < rhs.size(); i++) {
         res[i] = lhs[i] * rhs[i];       
     }
     return res;
+}
+
+template<typename T>
+std::vector<T> vec_sub(const std::vector<T>& lhs, const std::vector<T>& rhs) {
+    std::vector<T> res(rhs.size());
+    for (int i = 0; i < rhs.size(); i++) {
+        res[i] = lhs[i] - rhs[i];       
+    }
+    return res;
+}
+
 }
