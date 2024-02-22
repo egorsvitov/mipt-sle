@@ -8,33 +8,33 @@ namespace hldr {
 
     template<typename T>
     std::pair<mtrx::dense<T>, mtrx::dense<T>> hh_QR(const mtrx::dense<T>& A) {
-        std::vector<std::vector<T>> vs(A.width()); //storing Vs for Q
-        std::vector<T> R_data = A.get_data(); // output
-        for (int i = 0; i < A.width() - 1; i++) { // main loop, ith step
-            std::vector<T> x(A.height() - i); // first col in submatrix
+        std::vector<std::vector<T>> vs(A.width());
+        std::vector<T> R_data = A.get_data(); 
+        for (int i = 0; i < A.width() - 1; i++) { 
+            std::vector<T> x(A.height() - i);
             for (int l = 0; l < A.height() - i; l++) {
                 x[l] = R_data[(l+i)*A.width()+i];
             }
-            std::vector<T> v = x;                                   //
-            v[0] += (x[0] >= 0) ? std::sqrt(x*x) : -std::sqrt(x*x); // find v for step
+            std::vector<T> v = x;
+            v[0] += (x[0] >= 0) ? std::sqrt(x*x) : -std::sqrt(x*x); 
             vs[i] = v;
-            T vx = v*x; //theta
+            T vx = v*x; 
             T vv = v*v;
-            for (int l = 0; l < A.height() - i; l++) { // write theta in res
+            for (int l = 0; l < A.height() - i; l++) {
                 R_data[(l+i)*A.width() + i] = x[l] - 2*(vx/vv)*v[l];
             }
-            for (int j = i+1; j < A.width(); j++) { // modifying each col in submatrix
+            for (int j = i+1; j < A.width(); j++) {
                 for (int l = 0; l < A.height() - i; l++) {
                     x[l] = R_data[(l+i)*A.width()+j];
                 }
-                vx = v*x; //theta
-                for (int l = 0; l < A.height() - i; l++) { // write theta in res
+                vx = v*x;
+                for (int l = 0; l < A.height() - i; l++) { 
                     R_data[(l+i)*A.width() + j] = x[l] - 2*(vx/vv)*v[l];
                 }
             }
         }
         
-        std::vector<T> Q_data(A.width()*A.height(), 0); // constructing Q_1 == P_1
+        std::vector<T> Q_data(A.width()*A.height(), 0); 
         for (int i = 0; i < A.width(); i++) {
             Q_data[i*A.width() + i] = 1;
         }
@@ -45,15 +45,15 @@ namespace hldr {
             }
         }
         Q_data = Q_data - 2/(vs[0]*vs[0])*diad_data;
-        for (int i = 1; i < A.width() - 1; i++) { // main loop
-             for (int j = 0; j < A.height(); j++) { // modifying each row in lower submatrix
-                 std::vector<T> x(A.width() - i); // jth row
+        for (int i = 1; i < A.width() - 1; i++) { 
+             for (int j = 0; j < A.height(); j++) {
+                 std::vector<T> x(A.width() - i); 
                  for (int l = 0; l < A.width() - i; l++) {
                      x[l] = Q_data[j*A.width() + l+i];
                  }
-                 T vx = vs[i]*x; //theta
+                 T vx = vs[i]*x; 
                  T vv = vs[i]*vs[i];
-                 for (int l = 0; l < A.height() - i; l++) { // write theta in res
+                 for (int l = 0; l < A.height() - i; l++) {
                      Q_data[j*A.width() + l+i] = x[l] - 2*(vx/vv)*vs[i][l];
                 } 
              }
