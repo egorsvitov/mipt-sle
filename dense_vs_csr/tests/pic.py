@@ -45,5 +45,3 @@ writer = animation.PillowWriter(fps=5,
                                 metadata=dict(artist='Me'),
                                 bitrate=1800)
 ani.save('dynamic_scale.gif', writer=writer)
-
-#for i in range(0, len(n), 10):   

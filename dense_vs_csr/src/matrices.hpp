@@ -43,6 +43,9 @@ namespace mtrx {
                     std::cout << "|\n";
                 }
             }
+            const std::vector<T>& get_data() const {
+                return data;
+            }
         private:
             std::vector<T> data;
             std::size_t m;
