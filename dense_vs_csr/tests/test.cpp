@@ -3,10 +3,10 @@
 #include "../src/vector_operations.hpp"
 
 int main() {
-    mtrx::dense<float> A(3, 3, {1, 2, 3, 
+    mtrx::dense<float> A(3, 3, {0, 2, 3, 
                                 2, 0, 3, 
-                                3, 1, 2});
-    std::vector<float> b = {1, 2, 3};
+                                3, 1, 0});
+    std::vector<float> b = {1, 1, 1};
     std::vector<float> x = A*b;
     for (int i = 0; i < A.height(); i++) {
         std::cout << x[i] << ' ';
@@ -35,4 +35,6 @@ int main() {
     std::cout << q*r << ' ' << r*q << std::endl;
     std::cout << q + r << std::endl;
     std::cout << q*3.0f << ' ' << 3.0f*q << std::endl;
+
+    std::cout << B*b << std::endl;
 }

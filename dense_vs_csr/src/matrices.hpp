@@ -63,6 +63,9 @@ namespace mtrx {
             csr() : values(), col_indxs(), row_indxs(), m(0), n(0) {}
             csr(std::size_t m, std::size_t n, const std::vector<T>& values, const std::vector<std::size_t>& col_indxs, const std::vector<std::size_t>& row_indxs) : m(m), n(n), values(values), col_indxs(col_indxs), row_indxs(row_indxs) {}
             csr(const mtrx::dense<T>& source) : m(source.height()), n(source.width()), values(), col_indxs(), row_indxs() {
+                values.reserve(m*n);
+                col_indxs.reserve(m*n);
+                row_indxs.reserve(m+1);
                 int count = 0;
                 row_indxs.push_back(0);
                 for (int i = 0; i < m; i++) {
@@ -75,6 +78,8 @@ namespace mtrx {
                     }
                     row_indxs.push_back(count);
                 }
+                values.shrink_to_fit();
+                col_indxs.shrink_to_fit();
             }
             T operator()(std::size_t i, std::size_t j) const {
                 std::size_t row_start = row_indxs[i];
@@ -90,11 +95,20 @@ namespace mtrx {
                 }
                 return ((s) ? values[true_k] : 0);
             }
+            // std::vector<T> operator*(const std::vector<T>& x) const {
+            //     std::vector<T> res(m, 0);
+            //     for (int i = 0; i < m; i++) {
+            //         for (int j = 0; j < n; j++) {
+            //             res[i] += (*this)(i, j)*x[j];
+            //         }
+            //     }
+            //     return res;
+            // }
             std::vector<T> operator*(const std::vector<T>& x) const {
                 std::vector<T> res(m, 0);
-                for (int i = 0; i < m; i++) {
-                    for (int j = 0; j < n; j++) {
-                        res[i] += (*this)(i, j)*x[j];
+                for (auto i = 0; i < m; i++) {
+                    for (auto j = row_indxs[i]; j < row_indxs[i+1]; j++) {
+                        res[i] += x[col_indxs[j]]*values[j];
                     }
                 }
                 return res;
@@ -114,13 +128,13 @@ namespace mtrx {
             std::size_t height() const {
                 return m;
             }
-            std::vector<T> get_raw_values() const {
+            const std::vector<T>& get_raw_values() const {
                 return values;
             }
-            std::vector<std::size_t> get_raw_cols() const {
+            const std::vector<std::size_t>& get_raw_cols() const {
                 return col_indxs;
             }
-            std::vector<std::size_t> get_raw_rows() const {
+            const std::vector<std::size_t>& get_raw_rows() const {
                 return row_indxs;
             }
             void print() {
