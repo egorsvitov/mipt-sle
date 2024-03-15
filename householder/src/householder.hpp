@@ -1,3 +1,4 @@
+#pragma once
 #include "../../dense_vs_csr/src/matrices.hpp"
 #include "../../dense_vs_csr/src/vector_operations.hpp"
 #include <cmath>
