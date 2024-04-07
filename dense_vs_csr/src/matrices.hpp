@@ -1,6 +1,8 @@
 #pragma once
 #include <vector>
 #include <iostream>
+#include <numeric>
+#include "vector_operations.hpp"
 
 namespace mtrx {
 
@@ -28,6 +30,10 @@ namespace mtrx {
                 }
                 mtrx::dense<T> res(m, n, new_data);
                 return res;
+            }
+            mtrx::dense<T> operator-(const mtrx::dense<T>& rhs) const {
+                std::vector<T> new_data = data - rhs.get_data();
+                return mtrx::dense<T>(m, n, new_data);
             }
             std::size_t width() const {
                 return n;
@@ -82,19 +88,29 @@ namespace mtrx {
                 values.shrink_to_fit();
                 col_indxs.shrink_to_fit();
             }
+            // T operator()(std::size_t i, std::size_t j) const {
+            //     std::size_t row_start = row_indxs[i];
+            //     std::size_t row_end = row_indxs[i+1];
+            //     std::size_t true_k = 0;
+            //     bool s = false;
+            //     for (std::size_t k = row_start; k < row_end; k++) {
+            //         if (col_indxs[k] == j) {
+            //             true_k = k;
+            //             s = true;
+            //             break;
+            //         }
+            //     }
+            //     return ((s) ? values[true_k] : 0);
+            // }
             T operator()(std::size_t i, std::size_t j) const {
                 std::size_t row_start = row_indxs[i];
                 std::size_t row_end = row_indxs[i+1];
-                std::size_t true_k = 0;
-                bool s = false;
                 for (std::size_t k = row_start; k < row_end; k++) {
                     if (col_indxs[k] == j) {
-                        true_k = k;
-                        s = true;
-                        break;
+                        return values[k];
                     }
                 }
-                return ((s) ? values[true_k] : 0);
+                return 0;
             }
             // std::vector<T> operator*(const std::vector<T>& x) const {
             //     std::vector<T> res(m, 0);
@@ -159,4 +175,23 @@ template<typename T>
 mtrx::csr<T> operator*(const T& lhs, const mtrx::csr<T>& rhs) {
     return rhs*lhs;
 }
+
+template<typename T>
+mtrx::csr<T> csr_ident(std::size_t n) {
+    std::vector<std::size_t> cols(n, 0);
+    std::vector<std::size_t> rows(n+1, 0);
+    std::iota(cols.begin(), cols.end(), 0);
+    std::iota(rows.begin(), rows.end(), 0);
+    return mtrx::csr<T>(n, n, std::vector<T>(n, 1), cols, rows);
+}
+
+template<typename T>
+mtrx::dense<T> dense_ident(std::size_t n) {
+    std::vector<T> data(n*n, 0);
+    for (int i = 0; i < n; i++) {
+        data[i*n + i] = 1;
+    }
+    return mtrx::dense<T>(n, n, data);
+}
+
 }
