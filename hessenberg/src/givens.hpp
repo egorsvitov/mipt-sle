@@ -62,14 +62,10 @@ namespace givens {
 
     template<typename T>
     std::pair<T, T> zero_last(std::vector<std::vector<T>>& hs, const mtrx::dense<T>& Omega_n) {
-        T rho = 0;
+        T rho = hs.back()[hs.back().size()-2];
         T sigma = hs.back().back();
-        for (int i = 0; i < Omega_n.width(); i++) {
-            rho += Omega_n(Omega_n.height()-1, i) * hs.back()[i];
-        }
         T c = rho/std::sqrt(rho*rho + sigma*sigma);
-        T s = -sigma/std::sqrt(rho*rho + sigma*sigma);
-        
+        T s = sigma/std::sqrt(rho*rho + sigma*sigma);
         hs.back()[Omega_n.height()] = 0;
         hs.back()[Omega_n.height()-1] = std::sqrt(rho*rho + sigma*sigma);
 
